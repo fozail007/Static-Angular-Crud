@@ -1,0 +1,36 @@
+
+<div class="text-center">
+    <button type="submit" class="btn btn-primary" (click)="onNew()">New</button>
+  </div>
+<div class="regentry" *ngIf="showNew">
+    <form (ngSubmit)="onSave()">
+      <div class="form-group row">
+        <label for="name-input" class="col-2 col-form-label">Name</label>
+        <div class="col-10">
+          <input class="form-control" type="text" [(ngModel)]="regModel.name" name="name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email-input" class="col-2 col-form-label">Email</label>
+        <div class="col-10">
+          <input class="form-control" type="text" [(ngModel)]="regModel.email" name="email">
+        </div>
+      </div>
+     
+      <div class="form-group row">
+        <label for="course-input" class="col-2 col-form-label">Course</label>
+        <div class="col-10">
+          <input class="form-control" type="email" [(ngModel)]="regModel.course" name="course">
+        </div>
+      </div>
+      
+     
+       
+     
+      <button type="submit" class="btn btn-success">{{submitType}}</button>
+      <button type="submit" class="btn btn-primary" (click)="onCancel()">Cancel</button>
+    </form>
+   
+</div>
+
+
